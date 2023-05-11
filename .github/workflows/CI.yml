@@ -27,6 +27,7 @@ jobs:
         port: 21
         dangerous-clean-slate: true
         security: strict
+        protocol: ftps
         server: m152.gibz-informatik.ch
         username: infa3b_14
         password: ${{ secrets.ftp_password }}
