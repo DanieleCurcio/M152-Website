@@ -26,7 +26,8 @@ jobs:
     - name: Build Typescript
       uses: actions/setup-node@v3
     - run: npm install -g typescript
-    - run: tsc --project ~/clone/tsconfig.json --outDir ~/release/Source/
+    - run: ls
+    - run: tsc --project ~/clone/M152-Website/tsconfig.json --outDir ~/release/Source/
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
