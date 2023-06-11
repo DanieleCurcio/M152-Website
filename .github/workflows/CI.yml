@@ -22,11 +22,11 @@ jobs:
       with:
         path: ~/clone/
     - run: mkdir ~/release/
+    - run: sh ls -l
 
     - name: Build Typescript
       uses: actions/setup-node@v3
     - run: npm install -g typescript
-    - run: bash ls -l
     - run: tsc --project ~/clone/tsconfig.json --outDir ~/release/Source/
 
     - name: 📂 Sync files
