@@ -38,7 +38,9 @@
         var(--background-gradient),
         url("public/Assets/Images/Home/home-gif-1024.gif");
   }
+}
 
+@media only screen and (width <= 768px) {
   .home-arrow {
     margin-top: 78vh;
     margin-left: 42vw;

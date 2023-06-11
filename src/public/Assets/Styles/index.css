@@ -27,7 +27,9 @@
 }
 
 .arrow {
-  transform: rotate(90deg);
+  --scroll-arrow-transform: rotate(90deg);
+  cursor: pointer;
+  transform: var(--scroll-arrow-transform);
   filter: invert(1);
   height: 14vh;
 }
@@ -38,12 +40,12 @@
 
 @keyframes hoverArrow {
   0% {
-    transform: rotate(90deg) translateX(0);
+    transform: var(--scroll-arrow-transform) translateX(0);
   }
   50% {
-    transform: rotate(90deg) translateX(10px);
+    transform: var(--scroll-arrow-transform) translateX(10px);
   }
   100% {
-    transform: rotate(90deg) translateX(0);
+    transform: var(--scroll-arrow-transform) translateX(0);
   }
 }

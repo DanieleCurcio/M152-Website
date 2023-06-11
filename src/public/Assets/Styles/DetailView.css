@@ -1,0 +1,47 @@
+.detail-view-nav {
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: orangered;
+}
+
+.detail-view-logo {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.detail-view-back-arrow {
+    --detail-view-back-arrow-transform: rotate(180deg);
+    position: absolute;
+    left: 0.5vw;
+    cursor: pointer;
+    height: 8vh;
+    width: 5vw;
+    transform: var(--detail-view-back-arrow-transform);
+}
+
+.detail-view-back-arrow:hover {
+    animation: back-arrow-hover 1.5s infinite;
+}
+
+@keyframes back-arrow-hover {
+    0% {
+        transform: var(--detail-view-back-arrow-transform) translateX(0px);
+    }
+
+    50% {
+        transform: var(--detail-view-back-arrow-transform) translateX(10px);
+    }
+
+    100% {
+        transform: var(--detail-view-back-arrow-transform) translateX(0px);
+    }
+}
