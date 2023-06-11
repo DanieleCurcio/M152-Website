@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:mpeg:DASH:schema:MPD:2011"
+  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011"
+  type="static"
+  mediaPresentationDuration="PT96.233S"
+  minBufferTime="PT1S"
+  profiles="urn:mpeg:dash:profile:webm-on-demand:2012">
+<Period id="0" start="PT0S" duration="PT96.233S" >
+<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+<Representation id="0" bandwidth="21428" width="240" height="135">
+<BaseURL>240x135-30-1k.webm</BaseURL>
+<SegmentBase
+  indexRange="211951-212884">
+<Initialization
+  range="0-495" />
+</SegmentBase>
+</Representation>
+<Representation id="1" bandwidth="55036" width="480" height="270">
+<BaseURL>480x270-30-2k.webm</BaseURL>
+<SegmentBase
+  indexRange="516193-517136">
+<Initialization
+  range="0-497" />
+</SegmentBase>
+</Representation>
+<Representation id="2" bandwidth="166839" width="640" height="360">
+<BaseURL>640x360-30-100k.webm</BaseURL>
+<SegmentBase
+  indexRange="1604762-1605711">
+<Initialization
+  range="0-497" />
+</SegmentBase>
+</Representation>
+<Representation id="3" bandwidth="794606" width="960" height="540">
+<BaseURL>960x540-30-500k.webm</BaseURL>
+<SegmentBase
+  indexRange="7359171-7360121">
+<Initialization
+  range="0-497" />
+</SegmentBase>
+</Representation>
+<Representation id="4" bandwidth="1771719" width="1280" height="720">
+<BaseURL>1280x720-30-1000k.webm</BaseURL>
+<SegmentBase
+  indexRange="14391917-14392867">
+<Initialization
+  range="0-497" />
+</SegmentBase>
+</Representation>
+<Representation id="5" bandwidth="4946416" width="1920" height="1080">
+<BaseURL>1920x1080-30-3500k.webm</BaseURL>
+<SegmentBase
+  indexRange="45783888-45784871">
+<Initialization
+  range="0-497" />
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+<Representation id="6" bandwidth="146818">
+<BaseURL>audio.webm</BaseURL>
+<SegmentBase
+  indexRange="1770216-1770605">
+<Initialization
+  range="0-4307" />
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet mimeType="text/vtt" lang="en"> 
+    <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+     <SegmentTemplate timescale="100" duration="100" initialization="init$RepresentationID$.m4s" media="$RepresentationID$/$Number$.m4s">
+        <SegmentTimeline>
+          <S t="0" d="100" r="1" />
+        </SegmentTimeline>
+      <Representation id="caption_en" bandwidth="256">
+          <BaseURL>sub_en.vtt</BaseURL> 
+      </Representation>
+    </SegmentTemplate>
+</AdaptationSet>
+<AdaptationSet mimeType="text/vtt" lang="de">
+    <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+     <SegmentTemplate timescale="100" duration="100" initialization="init$RepresentationID$.m4s" media="$RepresentationID$/$Number$.m4s">
+        <SegmentTimeline>
+          <S t="0" d="100" r="1" />
+        </SegmentTimeline>
+      <Representation id="caption_de" bandwidth="256">
+          <BaseURL>sub_de.vtt</BaseURL> 
+      </Representation>
+    </SegmentTemplate>
+</AdaptationSet>
+</Period>
+</MPD>

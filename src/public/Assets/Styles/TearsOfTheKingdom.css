@@ -1,0 +1,137 @@
+.zelda-tears-of-the-kingdom {
+  background-image: linear-gradient(to bottom, rgba(56, 182, 200, 100) 0%, rgba(27, 222, 27, 100) 50%);
+}
+
+.totk-fade-in-Image {
+  background-image:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(27, 222, 27, 100) 40%),
+          url("https://media3.giphy.com/media/3ohc1bjC02MJjwly9i/giphy.gif?cid=ecf05e4772jdp83o1ok624esfcio8gue2njj7kax7rvb7rqi&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-position: center;
+  animation: ImageFadeIn 5s;
+}
+
+.totk-parent {
+  height: 90vh;
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  grid-template-rows: 20fr 45fr 20fr 15fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.totk-title {
+  font-family: Arial, serif;
+  font-size: 6vw;
+  top: 0;
+  right: 0;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row: 1;
+}
+
+.totk-left-box {
+  height: 100%;
+  overflow-wrap: break-word;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.totk-right-box {
+  overflow-wrap: break-word;
+  grid-column: 2;
+  grid-row-start: 2;
+  grid-row-end: span 3;
+}
+
+.totk-bottom-left-box {
+  grid-column: 1;
+  grid-row-start: 3;
+  grid-row-end: span 4;
+}
+
+.totk-more-information-button {
+  font-size: 3vh;
+  margin-left: 30vw;
+  right: 0;
+  height: 10vh;
+  grid-column: 1;
+  grid-row: 3;
+  background-color: #181a1b;
+  color: whitesmoke;
+  border: 2px solid;
+  padding: 10px;
+  align-self: center;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+
+.totk-more-information-button:hover {
+  border-color: #f1ff5c;
+  box-shadow: 1px 5px 3px 1px #f1ff5c;
+  color: #fff;
+  transform: translate(-3px, -7px);
+}
+
+.totk-more-information-button:active {
+  box-shadow: 1px 2px 3px 1px #f1ff5c;
+  transform: translate(2px, 5px);
+}
+
+.totk-arrow {
+  right: 0;
+  bottom: 0;
+  padding-left: 8vh;
+  margin-left: 42vw;
+}
+
+@media only screen and (width <= 768px) {
+  .totk-parent{
+    grid-template-columns: 100fr;
+    grid-template-rows: repeat(5, 100fr);
+  }
+
+  .totk-parent > * {
+    grid-column: 1;
+  }
+
+  .totk-title {
+    grid-row: 1;
+  }
+
+  .totk-left-box {
+    grid-row: 2;
+  }
+
+  .totk-right-box {
+    grid-row: 3;
+  }
+
+  .totk-bottom-left-box {
+    grid-row: 4;
+  }
+
+  .totk-more-information-button {
+    grid-row: 5;
+    height: 15vh;
+    margin-left: 0;
+  }
+
+  .totk-arrow {
+    margin-left: 31vw;
+  }
+}
+
+@keyframes ImageFadeIn {
+  0% {
+    opacity: 25;
+  }
+  25%{
+    opacity: 50;
+  }
+  100%{
+    opacity: 100;
+  }
+}

@@ -1,0 +1,140 @@
+.word-of-warcraft {
+  background-image: linear-gradient(to bottom, rgba(27, 222, 27, 100) 0%, rgba(14, 14, 115, 100) 50%);
+}
+
+.wow-fade-in-Image {
+  background-image:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(14, 14, 115, 100) 40%),
+          url("https://media3.giphy.com/media/3ohc1bjC02MJjwly9i/giphy.gif?cid=ecf05e4772jdp83o1ok624esfcio8gue2njj7kax7rvb7rqi&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-position: center;
+  animation: ImageFadeIn 5s;
+}
+
+.wow-parent {
+  height: 90vh;
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  grid-template-rows: 20fr 45fr 20fr 15fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.wow-title {
+  font-family: Arial, serif;
+  font-size: 6vw;
+  top: 0;
+  right: 0;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row: 1;
+}
+
+.wow-left-box {
+  width: 70%;
+  height: 100%;
+  justify-self: center;
+  overflow-wrap: break-word;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.wow-right-box {
+  height: 100%;
+  overflow-wrap: break-word;
+  grid-column: 1;
+  grid-row-start: 2;
+  grid-row-end: span 3;
+}
+
+.wow-bottom-right-box {
+  grid-column: 2;
+  grid-row-start: 3;
+  grid-row-end: span 4;
+}
+
+
+.wow-more-information-button {
+  font-size: 3vh;
+  margin-right: 30vw;
+  left: 0;
+  height: 10vh;
+  grid-column: 2;
+  grid-row: 3;
+  color: whitesmoke;
+  background-color: #181a1b;
+  border: 2px solid;
+  padding: 10px;
+  align-self: center;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+
+.wow-more-information-button:hover {
+  border-color: #f1ff5c;
+  box-shadow: 1px 5px 3px 1px #f1ff5c;
+  color: #fff;
+  transform: translate(-3px, -7px);
+}
+
+.wow-more-information-button:active {
+  box-shadow: 1px 2px 3px 1px #f1ff5c;
+  transform: translate(2px, 5px);
+}
+
+.wow-arrow {
+  top: 0;
+  padding-left: 2vh;
+  margin-left: 3.5vw;
+}
+
+@media only screen and (width <= 768px) {
+  .wow-parent{
+    grid-template-columns: 100fr;
+    grid-template-rows: repeat(5, 100fr);
+  }
+
+  .wow-parent > * {
+    grid-column: 1;
+  }
+
+  .wow-title {
+    grid-row: 1;
+  }
+
+  .wow-left-box {
+    grid-row: 2;
+  }
+
+  .wow-right-box {
+    grid-row: 3;
+  }
+
+  .wow-bottom-right-box {
+    grid-row: 4;
+  }
+
+  .wow-more-information-button {
+    grid-row: 5;
+    height: 15vh;
+    margin-right: 0;
+  }
+
+  .wow-arrow {
+    margin-left: 31vw;
+  }
+}
+
+@keyframes ImageFadeIn {
+  0% {
+    opacity: 25;
+  }
+  25%{
+    opacity: 50;
+  }
+  100%{
+    opacity: 100;
+  }
+}

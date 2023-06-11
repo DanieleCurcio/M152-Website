@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testee</title>
+    <script defer type="text/javascript" src="public/Source/index.js"></script>
+    <script defer src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+    <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.11.0/videojs-dash.min.js"></script>
+    <link rel="stylesheet" href="public/Assets/Styles/index.css">
+    <link rel="stylesheet" href="public/Assets/Styles/Home.css">
+    <link rel="stylesheet" href="public/Assets/Styles/TearsOfTheKingdom.css">
+    <link rel="stylesheet" href="public/Assets/Styles/WordOfWarcraft.css">
+    <link rel="stylesheet" href="public/Assets/Styles/Streaming.css">
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.14.3/video-js.css">
+    <title>M152-Portfolio</title>
 </head>
 <body>
-    <h1>hELLO yOU dUMMY</h1>
+    <main class="snap-scroll-container">
+        <section id="Home">
+            <h1 class="home-title">Our awesome Games</h1>
+            <img onclick="document.getElementById('Zelda Tears of the Kingdom').scrollIntoView({ behavior: 'smooth' })" class="arrow home-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
+        </section>
+        <section class="zelda-tears-of-the-kingdom" id="Zelda Tears of the Kingdom">
+            <div class="totk-parent">
+                <h1 class="totk-title">Zelda Tears of the Kingdom</h1>
+                <p class="totk-left-box">Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eaque harum laborum minus quam quidem soluta? Accusantium, amet animi autem commodi consequatur cum deserunt eos, et fugit itaque laudantium nulla!</p>
+                <p class="totk-right-box">Right Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, odit, reiciendis. Dolor dolorem dolorum ducimus eius enim expedita magnam molestiae provident quia, reprehenderit sint voluptatem. Hic molestiae odit pariatur quam!</p>
+                <button onclick="location.href='./DetailView_TearsOfTheKingdom.html'" class="totk-more-information-button">More Information ></button>
+                <img onclick="document.getElementById('Word of Warcraft').scrollIntoView({ behavior: 'smooth' })" class="arrow totk-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
+            </div>
+        </section>
+        <section class="word-of-warcraft" id="Word of Warcraft">
+            <div class="wow-parent">
+                <h1 class="wow-title">Word of Warcraft</h1>
+                <video id="wow-home-page-video" class="video-js wow-left-box" controls autoplay muted loop playsinline>
+                    <source src="public/Assets/Videos/Home/manifest.mpd" type="application/dash+xml">
+                    Your browser does not support video js player. Use Chrome or Firefox.
+                </video>
+                <p class="wow-right-box">Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur facere harum perferendis quo ut voluptate voluptatibus. A amet aspernatur aut, cupiditate dicta itaque labore nisi possimus quia reiciendis sequi.</p>
+                <button onclick="location.href='./DetailView_WordOfWarcraft.html'" class="wow-more-information-button">More Information ></button>
+                <img onclick="document.getElementById('Streaming').scrollIntoView({ behavior: 'smooth' })" class="arrow wow-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
+            </div>
+        </section>
+        <section id="Streaming">
+            <div class="stream-parent">
+                <h1 class="stream-title">Streaming</h1>
+                <iframe
+                        class="stream-iframe"
+                        src="https://player.twitch.tv/?channel=schessa&parent=localhost&muted=true&autoplay=true"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <script>
+        let player = videojs('wow-home-page-video')
+        player.setMuted(true)
+        player.setAutoplay(true)
+        player.play()
+    </script>
 </body>
 </html>
