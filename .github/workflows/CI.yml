@@ -19,20 +19,16 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-      with:
-        path: ~/clone/
-    - run: mkdir ~/release/
-    - run: sh ls -l
 
     - name: Build Typescript
       uses: actions/setup-node@v3
     - run: npm install -g typescript
-    - run: tsc --project ~/clone/tsconfig.json --outDir ~/release/Source/
+    - run: tsc --project ./tsconfig.json --outDir ~/release/Source/
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        local-dir: ~/release/
+        local-dir: ./
         port: 21
         dangerous-clean-slate: true
         security: strict
