@@ -28,7 +28,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        local-dir: ./
+        local-dir: ./src/
         port: 21
         dangerous-clean-slate: true
         security: strict
