@@ -93,7 +93,7 @@
 @media only screen and (width <= 768px) {
   .wow-parent{
     grid-template-columns: 100fr;
-    grid-template-rows: repeat(5, 100fr);
+    grid-template-rows: repeat(4, 100fr);
   }
 
   .wow-parent > * {
@@ -117,13 +117,13 @@
   }
 
   .wow-more-information-button {
-    grid-row: 5;
+    grid-row: 4;
     height: 15vh;
     margin-right: 0;
   }
 
   .wow-arrow {
-    margin-left: 31vw;
+    margin-left: 33vw;
   }
 }
 
