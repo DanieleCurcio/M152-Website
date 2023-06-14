@@ -4,77 +4,74 @@
   xmlns="urn:mpeg:DASH:schema:MPD:2011"
   xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011"
   type="static"
-  mediaPresentationDuration="PT96.233S"
+  mediaPresentationDuration="PT265.15S"
   minBufferTime="PT1S"
   profiles="urn:mpeg:dash:profile:webm-on-demand:2012">
-<Period id="0" start="PT0S" duration="PT96.233S" >
+<Period id="0" start="PT0S" duration="PT265.15S" >
 <AdaptationSet id="0" mimeType="video/webm" codecs="vp9" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-<Representation id="0" bandwidth="21428" width="240" height="135">
+<Representation id="0" bandwidth="19855" width="240" height="135">
 <BaseURL>240x135-30-1k.webm</BaseURL>
 <SegmentBase
-  indexRange="211951-212884">
+  indexRange="333091-334566">
 <Initialization
-  range="0-495" />
+  range="0-574" />
 </SegmentBase>
 </Representation>
-<Representation id="1" bandwidth="55036" width="480" height="270">
+<Representation id="1" bandwidth="48246" width="480" height="270">
 <BaseURL>480x270-30-2k.webm</BaseURL>
 <SegmentBase
-  indexRange="516193-517136">
+  indexRange="793588-795070">
 <Initialization
-  range="0-497" />
+  range="0-576" />
 </SegmentBase>
 </Representation>
-<Representation id="2" bandwidth="166839" width="640" height="360">
+<Representation id="2" bandwidth="222186" width="640" height="360">
 <BaseURL>640x360-30-100k.webm</BaseURL>
 <SegmentBase
-  indexRange="1604762-1605711">
+  indexRange="2593527-2595016">
 <Initialization
-  range="0-497" />
+  range="0-576" />
 </SegmentBase>
 </Representation>
-<Representation id="3" bandwidth="794606" width="960" height="540">
+<Representation id="3" bandwidth="845910" width="960" height="540">
 <BaseURL>960x540-30-500k.webm</BaseURL>
 <SegmentBase
-  indexRange="7359171-7360121">
+  indexRange="11596681-11598170">
 <Initialization
-  range="0-497" />
+  range="0-576" />
 </SegmentBase>
 </Representation>
-<Representation id="4" bandwidth="1771719" width="1280" height="720">
+<Representation id="4" bandwidth="1515509" width="1280" height="720">
 <BaseURL>1280x720-30-1000k.webm</BaseURL>
 <SegmentBase
-  indexRange="14391917-14392867">
+  indexRange="22320601-22322108">
 <Initialization
-  range="0-497" />
+  range="0-576" />
 </SegmentBase>
 </Representation>
-<Representation id="5" bandwidth="4946416" width="1920" height="1080">
+<Representation id="5" bandwidth="4371078" width="1920" height="1080">
 <BaseURL>1920x1080-30-3500k.webm</BaseURL>
 <SegmentBase
-  indexRange="45783888-45784871">
+  indexRange="70777652-70779199">
 <Initialization
-  range="0-497" />
+  range="0-572" />
 </SegmentBase>
 </Representation>
 </AdaptationSet>
-<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-<Representation id="6" bandwidth="146818">
+<AdaptationSet id="1" mimeType="audio/webm" codecs="opus" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1" customCharacteristic="Original">
+<Representation id="6" bandwidth="113433">
+<BaseURL>audio2.webm</BaseURL>
+<SegmentBase
+  indexRange="3546907-3547976">
+<Initialization
+  range="0-789" />
+<AdaptationSet id="2" mimeType="audio2/webm" codecs="opus" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1" customCharacteristic="Music">
+<Representation id="7" bandwidth="113433">
 <BaseURL>audio.webm</BaseURL>
 <SegmentBase
-  indexRange="1770216-1770605">
+  indexRange="3546907-3547976">
 <Initialization
-  range="0-4307" />
-</SegmentBase>
-</Representation>
-</AdaptationSet>
-<AdaptationSet id="1" mimeType="audio/mpeg" codecs="vorbis" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-<Representation id="6" bandwidth="146818">
-<BaseURL>https://ccmixter.org/content/zep_hurme/zep_hurme_-_Gone.mp3</BaseURL>
-<SegmentBase
-  indexRange="1770216-1770605">
-<Initialization
-  range="0-4307" />
+  range="0-789" />
 </SegmentBase>
 </Representation>
 </AdaptationSet>
