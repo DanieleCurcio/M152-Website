@@ -1,8 +1,8 @@
 const fadeInTotkImageClass = "totk-fade-in-Image";
 const fadeInWowImageClass = "wow-fade-in-Image";
 
-const totkSection = document.getElementById("Zelda Tears of the Kingdom")!;
-const wowSection = document.getElementById("Word of Warcraft")!;
+const totkSection = document.getElementById('Zelda-Tears-of-the-Kingdom') as HTMLSelectElement;
+const wowSection = document.getElementById('Word-of-Warcraft') as HTMLSelectElement;
 
 const totkStartIntersectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
