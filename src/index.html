@@ -41,7 +41,7 @@
                     Your browser does not support video js player. Use Chrome or Firefox.
                 </video>
                 <p class="wow-right-box">Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur facere harum perferendis quo ut voluptate voluptatibus. A amet aspernatur aut, cupiditate dicta itaque labore nisi possimus quia reiciendis sequi.</p>
-                <button onclick="location.href='./DetailView_WordOfWarcraft.html'" class="wow-more-information-button">More Information ></button>
+                <button onclick="location.href='DetailView_WordOfWarcraft.html'" class="wow-more-information-button">More Information ></button>
                 <img onclick="document.getElementById('Streaming').scrollIntoView({ behavior: 'smooth' })" class="arrow wow-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
             </div>
         </section>
@@ -50,17 +50,24 @@
                 <h1 class="stream-title">Streaming</h1>
                 <iframe
                         class="stream-iframe"
-                        src="https://player.twitch.tv/?channel=schessa&parent=localhost&muted=true&autoplay=true"
+                        src="https://player.twitch.tv/?channel=schessa&parent=m152.gibz-informatik.ch&muted=true&autoplay=true"
                         allowfullscreen>
                 </iframe>
             </div>
         </section>
     </main>
-    <script>
-        let player = videojs('wow-home-page-video')
-        player.setMuted(true)
-        player.setAutoplay(true)
-        player.play()
-    </script>
+    <div class="footer-container">
+        <footer class="fotter">
+            <p>&copy; <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> |
+                Created by Daniele Curcio and Mark Silbersack
+            </p>
+        </footer>
+    </div>
+<script>
+    let player = videojs('wow-home-page-video')
+    player.setMuted(true)
+    player.setAutoplay(true)
+    player.play()
+</script>
 </body>
 </html>

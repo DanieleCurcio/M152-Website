@@ -3,9 +3,10 @@
 }
 
 .totk-fade-in-Image {
+  --background-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(27, 222, 27, 100) 40%);
   background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(27, 222, 27, 100) 40%),
-          url("https://media3.giphy.com/media/3ohc1bjC02MJjwly9i/giphy.gif?cid=ecf05e4772jdp83o1ok624esfcio8gue2njj7kax7rvb7rqi&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+          var(--background-gradient),
+          url("public/Assets/Images/Totk/totk_TitleEdited-1200.webp");
   background-size: cover;
   background-position: center;
   animation: ImageFadeIn 5s;
@@ -34,6 +35,7 @@
 
 .totk-left-box {
   height: 100%;
+  justify-self: center;
   overflow-wrap: break-word;
   grid-column: 1;
   grid-row: 2;
@@ -44,12 +46,6 @@
   grid-column: 2;
   grid-row-start: 2;
   grid-row-end: span 3;
-}
-
-.totk-bottom-left-box {
-  grid-column: 1;
-  grid-row-start: 3;
-  grid-row-end: span 4;
 }
 
 .totk-more-information-button {
@@ -87,7 +83,27 @@
   margin-left: 42vw;
 }
 
-@media only screen and (width <= 768px) {
+@keyframes ImageFadeIn {
+  0% {
+    opacity: 25;
+  }
+  25%{
+    opacity: 50;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .totk-fade-in-Image {
+    background-image:
+            var(--background-gradient),
+            url("public/Assets/Images/Totk/totk_TitleEdited-425.webp");
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .totk-parent{
     grid-template-columns: 100fr;
     grid-template-rows: repeat(4, 100fr);
@@ -109,10 +125,6 @@
     grid-row: 3;
   }
 
-  .totk-bottom-left-box {
-    grid-row: 4;
-  }
-
   .totk-more-information-button {
     grid-row: 4;
     height: 15vh;
@@ -124,14 +136,34 @@
   }
 }
 
-@keyframes ImageFadeIn {
-  0% {
-    opacity: 25;
+@media only screen and (min-width: 768px) {
+  .totk-fade-in-Image {
+    background-image:
+            var(--background-gradient),
+            url("public/Assets/Images/Totk/totk_TitleEdited-768.webp");
   }
-  25%{
-    opacity: 50;
+}
+
+@media only screen and (min-width: 1024px) {
+  .totk-fade-in-Image {
+    background-image:
+            var(--background-gradient),
+            url("public/Assets/Images/Totk/totk_TitleEdited-1024.webp");
   }
-  100%{
-    opacity: 100;
+}
+
+@media only screen and (min-width: 1200px) {
+  .totk-fade-in-Image {
+    background-image:
+            var(--background-gradient),
+            url("public/Assets/Images/Totk/totk_TitleEdited-1200.webp");
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .totk-fade-in-Image {
+    background-image:
+            var(--background-gradient),
+            url("public/Assets/Images/Totk/totk_TitleEdited-2560.webp");
   }
 }

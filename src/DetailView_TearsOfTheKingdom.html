@@ -12,24 +12,31 @@
 <body>
     <nav class="detail-view-nav">
         <img class="detail-view-back-arrow" onclick="history.back()" src="public/Assets/Images/arrow.svg" alt="arrow">
-        <img class="detail-view-logo" onclick="location.href='index.html'" src="" alt="logo">
+        <img class="detail-view-logo" onclick="location.href='index.html'" src="public/Assets/Images/logo.svg" alt="logo">
     </nav>
     <main class="totk-parent zelda-tears-of-the-kingdom ">
         <h1 class="totk-title">Zelda Tears of the Kingdom</h1>
         <picture class="totk-left-box">
-            <source
-                    type="image/webp"
-                    srcset="">
+            <source media="(max-width: 425px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-425.webp">
+            <source media="(max-width: 768px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-768.webp">
+            <source media="(max-width: 1024px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-1024.webp">
+            <source media="(max-width: 1200px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-1200.webp">
+            <source media="(max-width: 1600px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-1600.webp">
+            <source media="(max-width: 1920px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-1920.webp">
+            <source media="(max-width: 2042px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-2042.webp">
+            <source media="(min-width: 2560px)" srcset="public/Assets/Images/DetailView_Totk/totk_sky-2560.webp">
+            <img class="totk-left-box" src="public/Assets/Images/DetailView_Totk/totk_sky-1024.webp" alt="sky">
         </picture>
         <p class="totk-right-box">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores commodi doloribus harum ipsa iusto, labore laudantium libero, maxime neque nihil nisi nostrum nulla officiis quis quo sed! Reiciendis, voluptatem?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo nesciunt quas rerum vel. Architecto esse, illum itaque magni quasi sed sunt. Ab, aliquid dignissimos ipsum maxime possimus quibusdam quod!
         </p>
-        <picture class="totk-bottom-left-box">
-            <source
-                    type="image/webp"
-                    srcset="">
-        </picture>
     </main>
+    <footer class="fotter">
+        <p>&copy; 2023 Your Company. All rights reserved. |
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Licensed under CC BY 4.0</a> |
+            Created by Daniele Curcio and Mark Silbersack
+        </p>
+    </footer>
 </body>
 </html>

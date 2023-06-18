@@ -40,13 +40,6 @@
   }
 }
 
-@media only screen and (width <= 768px) {
-  .home-arrow {
-    margin-top: 78vh;
-    margin-left: 42vw;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   #Home {
     background-image:

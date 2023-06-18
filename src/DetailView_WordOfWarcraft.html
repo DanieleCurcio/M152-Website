@@ -6,6 +6,7 @@
     <script defer src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
     <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.11.0/videojs-dash.min.js"></script>
+    <script src="public/Source/DetailView-Wow.js"></script>
     <link rel="stylesheet" href="./public/Assets/Styles/WordOfWarcraft.css">
     <link rel="stylesheet" href="./public/Assets/Styles/index.css">
     <link rel="stylesheet" href="https://vjs.zencdn.net/7.14.3/video-js.css">
@@ -13,23 +14,63 @@
 </head>
 <body>
     <nav class="detail-view-nav">
-        <img class="detail-view-back-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
-        <img class="detail-view-logo" onclick="location.href='index.html'" src="" alt="logo">
+        <img class="detail-view-back-arrow" onclick="history.back()" src="public/Assets/Images/arrow.svg" alt="arrow">
+        <img class="detail-view-logo" onclick="location.href='index.html'" src="public/Assets/Images/logo.svg" alt="logo">
     </nav>
     <main class="word-of-warcraft wow-parent">
         <h1 class="wow-title">Word of Warcraft</h1>
-        <video id="wow-detail-View-Video" class="video-js wow-left-box"  controls autoplay muted loop playsinline>
-            <source src="./public/Assets/Videos/WowDetailView/manifest.mpd" type="application/dash+xml">
-        </video>
-        <p class="wow-right-box">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolore excepturi modi. Ab accusantium atque dolorem magnam perferendis quis velit. Architecto corporis eveniet facere ipsum magnam perspiciatis, praesentium quos sit!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, ducimus eaque eum hic molestiae odit rerum. Ad architecto cumque doloribus facere fugit id porro possimus, quas quisquam, quo suscipit voluptate?
-        </p>
-        <picture class="wow-bottom-right-box">
-            <source srcset="" type="image/webp">
-        </picture>
+        <div class="wow-left-box">
+            <label for="speedRange">
+                Playback Speed:
+            </label>
+            <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
+            <span id="currentSpeed">1x</span>
+            <video id="wow-detail-View-Video" class="video-js"  controls autoplay muted loop playsinline>
+                <source src="public/Assets/Videos/WowDetailView/manifest.mpd" type="application/dash+xml">
+            </video>
+        </div>
+        <img class="wow-right-box" src="public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1024.webp" alt="dragon riding"
+             srcset="public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-425.webp 425w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-768.webp 768w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1024.webp 1024w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1200.webp 1200w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1600.webp 1600w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1920.webp 1920w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-2042.webp 2042w,
+                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-2560.webp 2560w"
+             sizes="(max-width: 425px) 100vw,
+                 (min-width: 768px) 50vw,
+                 (min-width: 1024px) 20vw,
+                 (min-width: 1200px) 21vw,
+                 (min-width: 1600px) 22vw,
+                 (min-width: 1920px) 23vw,
+                 (min-width: 2042px) 25vw,
+                 50vw">
+        <img class="wow-bottom-right-box" src="public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1024.webp" alt="dragon riding"
+             srcset="public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-425.webp 425w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-768.webp 768w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1024.webp 1024w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1200.webp 1200w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1600.webp 1600w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1920.webp 1920w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-2042.webp 2042w,
+                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-2560.webp 2560w"
+             sizes="(max-width: 425px) 100vw,
+                 (min-width: 768px) 50vw,
+                 (min-width: 1024px) 40vw,
+                 (min-width: 1200px) 41vw,
+                 (min-width: 1600px) 42vw,
+                 (min-width: 1920px) 43vw,
+                 (min-width: 2042px) 45vw,
+                 50vw">
     </main>
-<script>
+    <footer class="fotter">
+        <p>&copy; 2023 Your Company. All rights reserved. |
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Licensed under CC BY 4.0</a> |
+            Created by Daniele Curcio and Mark Silbersack
+        </p>
+    </footer>
+    <script>
     let player = videojs("wow-detail-View-Video")
     player.setMuted(true)
     player.setAutoplay(true)

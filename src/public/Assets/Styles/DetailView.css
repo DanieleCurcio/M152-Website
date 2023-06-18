@@ -3,19 +3,19 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
+    place-items: center;
     height: 8vh;
+    width: 100vw;
     background-color: darkviolet;
 }
 
 .detail-view-logo {
     cursor: pointer;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    display: grid;
+    place-items: center;
+    height: 8vh;
 }
 
 .detail-view-back-arrow {
