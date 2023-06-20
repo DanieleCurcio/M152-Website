@@ -1,5 +1,6 @@
 .word-of-warcraft {
   background-image: linear-gradient(to bottom, rgba(27, 222, 27, 100) 0%, rgba(14, 14, 115, 100) 50%);
+  overflow-y: hidden;
 }
 
 .wow-fade-in-Image {
@@ -37,7 +38,6 @@
   top: 0;
   left: 0;
   margin: auto;
-  overflow-wrap: break-word;
   grid-column: 2;
   grid-row: 2;
 }
@@ -91,8 +91,8 @@
 
 .wow-arrow {
   top: 0;
-  padding-left: 2vh;
-  margin-left: 3.5vw;
+  padding-right: 16vh;
+  margin-left: 40vw;
 }
 
 @keyframes ImageFadeIn {
@@ -123,7 +123,7 @@
   }
   .wow-parent{
     grid-template-columns: 100fr;
-    grid-template-rows: repeat(4, 100fr);
+    grid-template-rows: repeat(3, 100fr);
   }
 
   .wow-parent > * {
@@ -135,6 +135,9 @@
   }
 
   .wow-left-box {
+    top: 0;
+    right: 0;
+    margin: auto;
     grid-row: 2;
   }
 
@@ -142,6 +145,7 @@
     height: 100%;
     width: auto;
     grid-row: 3;
+    text-align: justify;
   }
 
   .wow-bottom-right-box {
@@ -150,8 +154,10 @@
 
   .wow-more-information-button {
     grid-row: 4;
-    height: 15vh;
-    margin-right: 0;
+    width: 50vw;
+    top: 0;
+    left: 0;
+    margin: auto;
   }
 
   .wow-arrow {

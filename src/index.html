@@ -5,16 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="public/Source/index.js"></script>
-    <script defer src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
-    <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.11.0/videojs-dash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.1.1/shaka-player.compiled.js"></script>
     <link rel="stylesheet" href="public/Assets/Styles/index.css">
     <link rel="stylesheet" href="public/Assets/Styles/Home.css">
     <link rel="stylesheet" href="public/Assets/Styles/TearsOfTheKingdom.css">
     <link rel="stylesheet" href="public/Assets/Styles/WordOfWarcraft.css">
     <link rel="stylesheet" href="public/Assets/Styles/Streaming.css">
     <link rel="shortcut icon" type="image/x-icon" href="public/Assets/Images/logo.ico">
-    <link rel="stylesheet" href="https://vjs.zencdn.net/7.14.3/video-js.css">
     <title>M152-Portfolio</title>
 </head>
 <body>
@@ -35,16 +32,15 @@
         <section class="word-of-warcraft" id="Word-of-Warcraft">
             <div class="wow-parent">
                 <h1 class="wow-title">Word-of-Warcraft</h1>
-                <video id="wow-home-page-video" class="video-js wow-left-box" controls autoplay muted loop playsinline>
-                    <source src="public/Assets/Videos/Home/manifest.mpd" type="application/dash+xml">
+                <video id="wow-home-page-video" class="wow-left-box" controls autoplay muted loop playsinline>
                     <track src="public/Assets/Videos/Home/sub_de.vtt" kind="subtitles" srclang="de" label="Deutsch">
                     <track src="public/Assets/Videos/Home/sub_en.vtt" kind="subtitles" srclang="en" label="English">
                     Your browser does not support video js player. Use Chrome or Firefox.
                 </video>
                 <p class="wow-right-box">Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur facere harum perferendis quo ut voluptate voluptatibus. A amet aspernatur aut, cupiditate dicta itaque labore nisi possimus quia reiciendis sequi.</p>
                 <button onclick="location.href='DetailView_WordOfWarcraft.html'" class="wow-more-information-button">More Information ></button>
-                <img onclick="document.getElementById('Streaming').scrollIntoView({ behavior: 'smooth' })" class="arrow wow-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
             </div>
+            <img onclick="document.getElementById('Streaming').scrollIntoView({ behavior: 'smooth' })" class="arrow wow-arrow" src="public/Assets/Images/arrow.svg" alt="arrow">
         </section>
         <section id="Streaming">
             <div class="stream-parent">
@@ -69,11 +65,5 @@
             </p>
         </footer>
     </div>
-<script>
-    let player = videojs('wow-home-page-video')
-    player.setMuted(true)
-    player.setAutoplay(true)
-    player.play()
-</script>
 </body>
 </html>

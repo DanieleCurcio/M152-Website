@@ -18,6 +18,10 @@
     height: 8vh;
 }
 
+.detail-view-video-controls {
+    display: flex;
+}
+
 .detail-view-back-arrow {
     --detail-view-back-arrow-transform: rotate(180deg);
     filter: invert(1);

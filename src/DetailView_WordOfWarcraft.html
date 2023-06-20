@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>More Information - Word-of-Warcraft</title>
-    <script defer src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
-    <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.11.0/videojs-dash.min.js"></script>
     <script src="public/Source/DetailView-Wow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.1.1/shaka-player.compiled.js"></script>
     <link rel="stylesheet" href="./public/Assets/Styles/WordOfWarcraft.css">
     <link rel="stylesheet" href="./public/Assets/Styles/index.css">
-    <link rel="stylesheet" href="https://vjs.zencdn.net/7.14.3/video-js.css">
     <link rel="stylesheet" href="public/Assets/Styles/DetailView.css">
     <link rel="shortcut icon" type="image/x-icon" href="public/Assets/Images/logo.ico">
 </head>
@@ -21,49 +18,40 @@
     <main class="word-of-warcraft wow-parent">
         <h1 class="wow-title">Word-of-Warcraft</h1>
         <div class="wow-left-box">
-            <label for="speedRange">
-                Playback Speed:
-            </label>
-            <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
-            <span id="currentSpeed">1x</span>
+            <div class="detail-view-video-controls">
+                <label for="speedRange">
+                    Playback Speed:
+                </label>
+                <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
+                <span id="currentSpeed">1x</span>
+            </div>
             <video id="wow-detail-View-Video" class="video-js"  controls autoplay muted loop playsinline>
                 <source src="public/Assets/Videos/WowDetailView/manifest.mpd" type="application/dash+xml">
             </video>
         </div>
-        <img class="wow-right-box" src="public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1024.webp" alt="dragon riding"
-             srcset="public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-425.webp 425w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-768.webp 768w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1024.webp 1024w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1200.webp 1200w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1600.webp 1600w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-1920.webp 1920w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-2042.webp 2042w,
-                  public/Assets/Images/DetailView_Wow/Neltharus/Neltharus-2560.webp 2560w"
-             sizes="(max-width: 425px) 100vw,
-                 (min-width: 768px) 50vw,
-                 (min-width: 1024px) 20vw,
-                 (min-width: 1200px) 21vw,
-                 (min-width: 1600px) 22vw,
-                 (min-width: 1920px) 23vw,
-                 (min-width: 2042px) 25vw,
+        <p class="wow-right-box">
+            Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eaque harum laborum minus quam quidem soluta? Accusantium, amet animi autem commodi consequatur cum deserunt eos, et fugit itaque laudantium nulla!Left Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eaque harum laborum minus quam quidem soluta? Accusantium, amet animi autem commodi consequatur cum deserunt eos, et fugit itaque laudantium nulla!
+        </p>
+        <picture class="wow-bottom-right-box">
+            <source
+                    srcset="public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-425.webp 425w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-768.webp 768w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1024.webp 1024w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1200.webp 1200w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1600.webp 1600w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1920.webp 1920w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-2042.webp 2024w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-2560.webp 2560w"
+                    sizes="(max-width: 425px) 100vh,
+                 (min-width: 768px) 50vh,
+                 (min-width: 1024px) 40vh,
+                 (min-width: 1200px) 41vh,
+                 (min-width: 1600px) 42vh,
+                 (min-width: 1920px) 43vh,
+                 (min-width: 2042px) 45vh,
                  50vw">
-        <img class="wow-bottom-right-box" src="public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1024.webp" alt="dragon riding"
-             srcset="public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-425.webp 425w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-768.webp 768w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1024.webp 1024w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1200.webp 1200w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1600.webp 1600w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-1920.webp 1920w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-2042.webp 2042w,
-                  public/Assets/Images/DetailView_Wow/DragonRidingEdited/DragonRidingEdited-2560.webp 2560w"
-             sizes="(max-width: 425px) 100vw,
-                 (min-width: 768px) 50vw,
-                 (min-width: 1024px) 40vw,
-                 (min-width: 1200px) 41vw,
-                 (min-width: 1600px) 42vw,
-                 (min-width: 1920px) 43vw,
-                 (min-width: 2042px) 45vw,
-                 50vw">
+            <img src="public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1024.webp" alt="dragon riding">
+        </picture>
     </main>
     <footer class="fotter">
         <p>&copy; 2023 Your Company. All rights reserved. |
@@ -71,11 +59,5 @@
             Created by Daniele Curcio and Mark Silbersack
         </p>
     </footer>
-    <script>
-    let player = videojs("wow-detail-View-Video")
-    player.setMuted(true)
-    player.setAutoplay(true)
-    player.play()
-</script>
 </body>
 </html>

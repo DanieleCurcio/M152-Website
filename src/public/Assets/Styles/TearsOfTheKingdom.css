@@ -35,6 +35,7 @@
 
 .totk-left-box {
   height: 100%;
+  overflow-y: hidden;
   justify-self: center;
   overflow-wrap: break-word;
   grid-column: 1;
@@ -79,8 +80,8 @@
 .totk-arrow {
   right: 0;
   bottom: 0;
-  padding-left: 8vh;
-  margin-left: 42vw;
+  padding-left: 9vh;
+  margin-left: 39vw;
 }
 
 @keyframes ImageFadeIn {
