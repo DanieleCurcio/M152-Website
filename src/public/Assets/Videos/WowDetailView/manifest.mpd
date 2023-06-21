@@ -67,7 +67,7 @@
   range="0-4433" />
 </SegmentBase>
 </Representation>
-<Representation id="7" bandwidth="204344" audioSamplingRate="44100">
+<Representation id="7" bandwidth="204344" audioSamplingRate="48000">
 <BaseURL>audio2.webm</BaseURL>
 <SegmentBase
   indexRange="3750565-3751174">
