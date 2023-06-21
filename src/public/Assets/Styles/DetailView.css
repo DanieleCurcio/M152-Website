@@ -19,7 +19,17 @@
 }
 
 .detail-view-video-controls {
+    overflow-y: hidden;
+}
+
+#wow-detail-View-Video {
+    height: 100%;
+}
+
+.detail-view-video {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
 }
 
 .detail-view-back-arrow {
