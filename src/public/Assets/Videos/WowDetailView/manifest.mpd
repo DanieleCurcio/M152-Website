@@ -58,8 +58,8 @@
 </SegmentBase>
 </Representation>
 </AdaptationSet>
-<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" audioSamplingRate="48000" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-<Representation id="6" bandwidth="147615">
+<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" bitstreamSwitching="false" subsegmentAlignment="false" subsegmentStartsWithSAP="1">
+<Representation id="6" bandwidth="147615" audioSamplingRate="48000">
 <BaseURL>audio.webm</BaseURL>
 <SegmentBase
   indexRange="2741819-2742427">
@@ -67,9 +67,7 @@
   range="0-4433" />
 </SegmentBase>
 </Representation>
-</AdaptationSet>
-<AdaptationSet id="2" mimeType="audio/webm" codecs="vorbis" audioSamplingRate="44100" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-<Representation id="7" bandwidth="204344">
+<Representation id="7" bandwidth="204344" audioSamplingRate="44100">
 <BaseURL>audio2.webm</BaseURL>
 <SegmentBase
   indexRange="3750565-3751174">

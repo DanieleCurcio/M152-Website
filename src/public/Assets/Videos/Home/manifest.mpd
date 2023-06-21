@@ -68,27 +68,5 @@
 </SegmentBase>
 </Representation>
 </AdaptationSet>
-<AdaptationSet mimeType="text/vtt" lang="en"> 
-    <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
-     <SegmentTemplate timescale="100" duration="100" initialization="init$RepresentationID$.m4s" media="$RepresentationID$/$Number$.m4s">
-        <SegmentTimeline>
-          <S t="0" d="100" r="1" />
-        </SegmentTimeline>
-      <Representation id="caption_en" bandwidth="256">
-          <BaseURL>sub_en.vtt</BaseURL> 
-      </Representation>
-    </SegmentTemplate>
-</AdaptationSet>
-<AdaptationSet mimeType="text/vtt" lang="de">
-    <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
-     <SegmentTemplate timescale="100" duration="100" initialization="init$RepresentationID$.m4s" media="$RepresentationID$/$Number$.m4s">
-        <SegmentTimeline>
-          <S t="0" d="100" r="1" />
-        </SegmentTimeline>
-      <Representation id="caption_de" bandwidth="256">
-          <BaseURL>sub_de.vtt</BaseURL> 
-      </Representation>
-    </SegmentTemplate>
-</AdaptationSet>
 </Period>
 </MPD>
