@@ -8,7 +8,7 @@
   minBufferTime="PT1S"
   profiles="urn:mpeg:dash:profile:webm-on-demand:2012">
 <Period id="0" start="PT0S" duration="PT151.555S" >
-<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" bitstreamSwitching="false" subsegmentAlignment="false" subsegmentStartsWithSAP="1">
 <Representation id="0" bandwidth="19271" width="240" height="135">
 <BaseURL>240x135-30-1k.webm</BaseURL>
 <SegmentBase
@@ -57,23 +57,25 @@
   range="0-569" />
 </SegmentBase>
 </Representation>
-</AdaptationSet>
-<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" bitstreamSwitching="false" subsegmentAlignment="false" subsegmentStartsWithSAP="1">
-<Representation id="6" bandwidth="147615" audioSamplingRate="48000">
+<Representation id="6" bandwidth="147615">
 <BaseURL>audio.webm</BaseURL>
 <SegmentBase
   indexRange="2741819-2742427">
 <Initialization
   range="0-4433" />
 </SegmentBase>
+ <Accessibility schemeIdUri="urn:mpeg:dash:custom:scheme:2019" value="Original" />
 </Representation>
-<Representation id="7" bandwidth="204344" audioSamplingRate="48000">
+</AdaptationSet>
+<AdaptationSet id="1" mimeType="audio/webm" codecs="vorbis" audioSamplingRate="44100" bitstreamSwitching="true" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+<Representation id="7" bandwidth="204344">
 <BaseURL>audio2.webm</BaseURL>
 <SegmentBase
   indexRange="3750565-3751174">
 <Initialization
   range="0-4572" />
 </SegmentBase>
+ <Accessibility schemeIdUri="urn:mpeg:dash:custom:scheme:2019" value="Music" />
 </Representation>
 </AdaptationSet>
 </Period>
