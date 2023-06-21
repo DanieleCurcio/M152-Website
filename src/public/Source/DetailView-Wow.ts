@@ -11,6 +11,20 @@ async function InitWowDetailSite() {
         console.error('Browser does not support shaka player!');
         alert("The site might not work as intended because you browser doesn't support the shaka browser.")
     }
+
+    InitPlayBackSpeedInput();
+}
+
+function InitPlayBackSpeedInput() {
+    const videoElement = document.getElementById('wow-detail-View-Video') as HTMLVideoElement;
+    const currentSpeed = document.getElementById('currentSpeed') as HTMLSpanElement;
+    const speedRange = document.getElementById('speedRange') as HTMLInputElement
+
+    speedRange.addEventListener('input', () => {
+        const speed = parseFloat(speedRange.value);
+        videoElement.playbackRate = speed;
+        currentSpeed.textContent = `${speed}x`
+    });
 }
 
 // @ts-ignore
