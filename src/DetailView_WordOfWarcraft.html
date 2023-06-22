@@ -18,7 +18,7 @@
     <main class="word-of-warcraft wow-parent">
         <h1 class="wow-title">Word-of-Warcraft</h1>
         <div class="wow-left-box detail-view-video">
-            <div class="detail-view-video-controls">
+            <div id="wow-detail-view-video-controls" class="detail-view-video-controls">
                 <label for="speedRange">
                     Playback Speed:
                 </label>
@@ -36,26 +36,30 @@
             <source
                     srcset="public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-425.webp 425w,
                   public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-768.webp 768w,
-                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1024.webp 1024w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1024.webp 3x,
                   public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1200.webp 1200w,
                   public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1600.webp 1600w,
                   public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1920.webp 1920w,
-                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-2042.webp 2024w,
+                  public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-2042.webp 5x,
                   public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-2560.webp 2560w"
-                    sizes="(max-width: 425px) 100vh,
+                    sizes="(max-width: 425px) 50vh,
                  (min-width: 768px) 50vh,
-                 (min-width: 1024px) 40vh,
-                 (min-width: 1200px) 41vh,
-                 (min-width: 1600px) 42vh,
-                 (min-width: 1920px) 43vh,
+                 (min-width: 1024px) 41vh,
+                 (min-width: 1200px) 42vh,
+                 (min-width: 1600px) 43vh,
+                 (min-width: 1920px) 44vh,
                  (min-width: 2042px) 45vh,
                  50vw">
             <img src="public/Assets/Images/DetailView_Wow/SeatsOfAspectsEdited-1024.webp" alt="dragon riding">
         </picture>
     </main>
     <footer class="fotter">
-        <p>&copy; 2023 Your Company. All rights reserved. |
-            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Licensed under CC BY 4.0</a> |
+        <p>&copy;
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+            </a>
+            <br/>
+            This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> |
             Created by Daniele Curcio and Mark Silbersack
         </p>
     </footer>
